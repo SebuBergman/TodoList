@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoList from './TodoList';
+import Home from './Home';
+import React, { useState } from 'react';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
-function App() {
-  return (
+export default function App() {
+    const [value, setValue] = useState('one');
+    const handleTabChange = (event, value) => {
+        setValue(value);
+    };
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <Tabs value={value} onChange={handleTabChange}>
+            <Tab value="home" label="Home" />
+            <Tab value="todolist" label="TodoList" />
+        </Tabs>
+        {value === 'home' && <Home />}
+        {value === 'todolist' && <TodoList />}
+    </div>);
 }
-
-export default App;
