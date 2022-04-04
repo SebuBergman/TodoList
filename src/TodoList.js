@@ -47,7 +47,7 @@ function Todolist() {
   }
 
   const columns = [
-    { field: "description", sortable: true, filter: true, floatingFilter: true },
+    { field: "desc", sortable: true, filter: true, floatingFilter: true },
     { field: "date", sortable: true, filter: true, floatingFilter: true, valueFormatter: params => format(params.value, 'dd.MM.yyyy') },
     { field: "priority", sortable: true, filter: true, floatingFilter: true, cellStyle: params => params.value === "High" ? { color: 'red' } : { color: 'black' } } // == if High = red : else = black            
   ];
