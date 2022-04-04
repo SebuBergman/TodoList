@@ -16,14 +16,14 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-material.css';
 
 function Todolist() {
-  const [todo, setTodo] = useState({description: '', date: '', priority: ''});
+  const [todo, setTodo] = useState({desc: '', date: '', priority: ''});
   const [todos, setTodos] = useState([]);
   const gridRef = useRef();
 
   // add to-do to the list
   const addTodo = () => {
     setTodos([todo, ...todos]);
-    setTodo({description: '', date: '', priority: ''});
+    setTodo({desc: '', date: '', priority: ''});
   }
 
   //Check if the input is changed
@@ -63,8 +63,8 @@ function Todolist() {
             <TextField
               label="Description"
               variant="standard"
-              name="description"
-              value={todo.description}
+              name="desc"
+              value={todo.desc}
               onChange={inputChanged}
             />
             <LocalizationProvider dateAdapter={AdapterDateFns} >
@@ -86,9 +86,9 @@ function Todolist() {
               value={todo.priority}
               onChange={inputChanged}
             />
-            <Button onClick={addTodo} variant="contained" startIcon={<AddIcon />}>Add</Button>
+            <Button onClick={addTodo} variant="contained" className="buttonadd" startIcon={<AddIcon />}>Add</Button>
             <Button onClick={deleteTodo} variant="contained" startIcon={<DeleteIcon />}>Delete</Button>
-            <Button onClick={clearTodo} variant="contained">Clear</Button>
+            <Button onClick={clearTodo} variant="contained" className="buttonaclear">Clear</Button>
           </Stack> 
           
           <span id="animationAction"></span>

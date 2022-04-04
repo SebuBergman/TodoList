@@ -6,7 +6,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 export default function App() {
-    const [value, setValue] = useState('one');
+    const [value, setValue] = useState('home');
     const handleTabChange = (event, value) => {
         setValue(value);
     };
