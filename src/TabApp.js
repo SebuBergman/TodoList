@@ -11,11 +11,11 @@ function TabApp() {
     return (
     <div>
         <Tabs value={value} onChange={handleTabChange}>
-            <Tab value="home" label="Home" />
-            <Tab value="todolist" label="TodoList" />
+            <Tab value="/home" label="Home" />
+            <Tab value="/todolist" label="TodoList" />
         </Tabs>
-        {value === 'home' && <div>Home page</div>}
-        {value === 'todolist' && <div>Todolist</div>}
+        {value === '/home' && <div>Home page</div>}
+        {value === '/todolist' && <div>Todolist</div>}
     </div>);
 }
     
