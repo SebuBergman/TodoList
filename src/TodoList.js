@@ -42,8 +42,8 @@ function Todolist() {
   }
 
   // ClearTodotable
-  const clearTodo = () => {
-    setTodos(todos.filter((todo, index) => gridRef));
+  const clearTodo = (e) => {
+    setTodos(todos.filter((todo, index) => index < 0));
   }
 
   const columns = [
