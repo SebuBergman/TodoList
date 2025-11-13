@@ -1,5 +1,5 @@
 import './App.css';
-import TodoList from './TodoList';
+import TodoList from './components/TodoList';
 import Home from './Home';
 import React, { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
